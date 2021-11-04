@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>api-ToDoList</name>
+    </assembly>
+    <members>
+        <member name="M:api_ToDoList.Controllers.api.v1.ToDoListController.Get">
+             <summary>
+             Retorna itens cadastrados.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /ToDoList
+            
+             </remarks>
+             <returns>item criados recentemente</returns>
+             <response code="200">Retorna todos os itens</response>
+             <response code="400">Não possui itens cadatrados</response>      
+        </member>
+        <member name="M:api_ToDoList.Controllers.api.v1.ToDoListController.GetByID(System.Int32)">
+             <summary>
+             Retorna um Item com id do parametro.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /ToDoList/2
+            
+             </remarks>
+             <returns>item criados recentemente</returns>
+             <response code="200">Retorna o item de id igual o parametro</response>
+             <response code="400">Não possui itens cadatrados com esse id</response>      
+        </member>
+        <member name="M:api_ToDoList.Controllers.api.v1.ToDoListController.Create(api_ToDoList.Models.ToDoList)">
+             <summary>
+             Cria um item novo
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /ToDoList
+                 {
+                    "Descricao": "Exemplo",
+                 }
+            
+             </remarks>
+             <returns>item criados recentemente</returns>
+             <response code="201">Retorna o item criado</response>
+             <response code="500">Não possivel inserir o item</response> 
+        </member>
+        <member name="M:api_ToDoList.Controllers.api.v1.ToDoListController.Update(api_ToDoList.Models.ToDoList)">
+             <summary>
+             Edita um item 
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /ToDoList/Update
+                 {
+                    "Id": 2,
+                    "Descricao": "Exemplo 2",
+                 }
+            
+             </remarks>
+             <returns>item criados recentemente</returns>
+             <response code="201">Retorna o item editado</response>
+             <response code="500">Não possivel inserir o item</response> 
+        </member>
+        <member name="M:api_ToDoList.Controllers.api.v1.ToDoListController.Delete(System.Int32)">
+             <summary>
+             Remove um item 
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /ToDoList/Delete/1
+                 
+            
+             </remarks>
+             <returns>mensagem de erro ou de exito</returns>
+             <response code="200">Retorna o item editado</response>
+             <response code="404">Item nao encontrado</response> 
+             <response code="400">Não possivel alterar o item</response> 
+        </member>
+    </members>
+</doc>
